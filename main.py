@@ -29,7 +29,7 @@ def custom_eval(expression):
     except Exception as e:
         return f"Error in expression: {str(e)}"
 
-if 1 == 1:
+while True:
     # Example usage 
     inputt = input("Expression: ")
     result = custom_eval(inputt)
