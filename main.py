@@ -4,7 +4,7 @@ import math
 constants = {
     'pi': math.pi,
     'e': math.e,
-    'golden_ratio': (1 + math.sqrt(5)) / 2
+    'phi': (1 + math.sqrt(5)) / 2
 }
 
 # Custom functions
