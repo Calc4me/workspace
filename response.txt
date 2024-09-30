@@ -1,0 +1,61 @@
+Here’s a challenging coding problem that combines mathematics (calculus), lists, and visualizations using `matplotlib`:
+
+### Problem: Numerical Integration & Derivation Visualizer
+
+#### Task:
+You are tasked with writing a Python program that:
+1. **Approximates the derivative** of a given mathematical function at a set of points using **numerical differentiation**.
+2. **Approximates the integral** of the function over a specified range using **numerical integration**.
+3. **Visualizes the function**, its derivative, and its integral on the same plot using `matplotlib`.
+
+### Requirements:
+
+1. **Input Function**: 
+   - The user should be able to define a function `f(x)` (such as `sin(x)`, `x^2`, etc.).
+   - The function should accept a single variable `x` and return a value.
+
+2. **Derivative Calculation**:
+   - Implement **numerical differentiation** to approximate the first derivative of the function at different points in the domain. Use the **finite difference method**:
+     - Forward difference: \( f'(x) \approx \frac{f(x+h) - f(x)}{h} \)
+     - Choose a small `h` value like `1e-5`.
+
+3. **Integral Calculation**:
+   - Implement **numerical integration** using the **trapezoidal rule** to approximate the integral of the function over a given interval `[a, b]`:
+     - Trapezoidal rule: \( \int_a^b f(x) dx \approx \frac{h}{2} \left( f(a) + 2\sum_{i=1}^{n-1} f(x_i) + f(b) \right) \), where `h` is the width of the sub-intervals.
+
+4. **Visualization**:
+   - Create a **single plot** that displays the following:
+     - The original function `f(x)` in **blue**.
+     - The derivative of the function `f'(x)` in **red**.
+     - The integral of the function `F(x)` in **green**.
+   - Include appropriate **legends**, labels, and titles.
+
+5. **Range and Points**:
+   - The user should input the range `[a, b]` over which the function, derivative, and integral are calculated and visualized.
+   - Generate 100 evenly spaced points within the range `[a, b]` for plotting.
+
+### Sample Input and Output:
+
+#### Input:
+- A function \( f(x) = \sin(x) \)
+- A range \( [0, 2\pi] \)
+
+#### Output:
+- A plot displaying:
+  - \( f(x) = \sin(x) \) in blue.
+  - \( f'(x) = \cos(x) \) in red (the derivative of `sin(x)`).
+  - \( F(x) = -\cos(x) + C \) in green (the indefinite integral of `sin(x)`).
+
+#### Constraints:
+- The code must work for any user-defined function (e.g., polynomial, trigonometric, or exponential).
+- For simplicity, the integral should assume an initial value of `0` at the lower limit of the range.
+
+### Challenge Difficulty:
+- **Medium/Hard**: Requires knowledge of calculus, numerical methods, and `matplotlib` for visualization.
+
+### Key Learning Objectives:
+- Implement numerical methods for differentiation and integration.
+- Apply mathematical concepts to real-world computational problems.
+- Develop skills in data visualization using `matplotlib`.
+
+This challenge tests your understanding of calculus concepts, algorithmic thinking for numerical approximation, and visualization techniques in Python.

@@ -1,4 +1,4 @@
 from sympy import *
-x, t, z, nu = symbols('x t z nu')
+x, y, z = symbols('x y z')
 init_printing(use_unicode=True)
-print(solve(x**2-1, x))
+print(solve([x + y - 2*z, y + 4*z], [x, y], dict=True))

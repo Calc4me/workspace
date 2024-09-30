@@ -1,0 +1,112 @@
+Certainly! Let's extend the challenge further by adding more advanced requirements to make it even more interesting:
+
+### Extended Challenge: Numerical Calculus Visualizer with Root Finding and Error Analysis
+
+In addition to the previous requirements, here are more tasks to include:
+
+---
+
+### **New Requirements:**
+
+1. **Root Finding (Bonus Task)**:
+   - Implement a **root-finding algorithm** (such as the **bisection method** or **Newton-Raphson method**) to find the roots (zero crossings) of the function within a specified interval `[a, b]`.
+   - Visualize the root(s) on the plot as well by marking them with **black dots** or another distinguishable marker.
+
+2. **Error Analysis**:
+   - Provide a way to compare the **numerical derivative** and **numerical integral** with their **analytical solutions** (if provided).
+   - Plot the **absolute error** for both the derivative and integral on separate subplots.
+     - This will help users understand the error introduced by the numerical methods.
+   
+3. **User-defined Functions**:
+   - Allow the user to input more complex functions dynamically using `lambda` expressions or string-based input (which you can convert into functions using `eval()` safely).
+   
+4. **Styling and Annotations**:
+   - Add additional styling to the plot:
+     - Mark **critical points** (where the derivative is zero) on the plot with specific markers.
+     - Add **annotations** for the max and min points of the function.
+     - Allow the user to choose colors and line styles for the function, derivative, and integral through function parameters.
+   
+5. **Interactive Controls (Optional)**:
+   - Integrate **interactive controls** using `matplotlib.widgets` (like sliders) to allow the user to adjust the range `[a, b]` dynamically, and see real-time updates of the function, its derivative, and integral on the plot.
+   
+6. **Saving the Plot**:
+   - Provide an option to save the plot as an image (e.g., `.png`) with a customized filename.
+   
+---
+
+### **Detailed Specifications:**
+
+1. **Root Finding Algorithm**:
+   - **Bisection Method**: Implement this simple but reliable algorithm to find a root within an interval. The method works by repeatedly halving the interval and selecting the subinterval that contains the root.
+   - **Visualization**: Mark the roots on the plot with **black dots**. Optionally, display the root values on the plot using annotations.
+
+2. **Error Analysis for Numerical Methods**:
+   - **Analytical vs Numerical Derivative**: 
+     - If an analytical derivative is known, compare it with the numerical derivative using finite differences.
+     - Plot the **absolute error** (e.g., `|f'(x)_analytical - f'(x)_numerical|`) on a separate subplot.
+   - **Analytical vs Numerical Integration**:
+     - Compare the numerical integration (using the trapezoidal rule) with the analytical integral (if known).
+     - Plot the **absolute error** (e.g., `|F(x)_analytical - F(x)_numerical|`) on a separate subplot.
+   
+3. **User Input**:
+   - Use `lambda` expressions or accept user input for more complex functions. For example, instead of hardcoding `f(x) = sin(x)`, allow the user to input any function like `lambda x: x**3 - 2*x + 1`.
+
+4. **Annotations and Styling**:
+   - **Critical Points**: Find points where the derivative of the function is zero (indicating potential maxima, minima, or saddle points). Mark these critical points with special symbols.
+   - **Maxima/Minima Annotation**: Annotate the maximum and minimum points of the function on the graph. This can be done by evaluating the function over a grid of points and finding where the function achieves its max/min.
+   - **Customizable Colors**: Allow the user to specify the colors and line styles for the function, its derivative, and its integral.
+
+5. **Interactive Controls (Optional)**:
+   - Use `matplotlib.widgets.Slider` to create a slider that allows the user to dynamically adjust the range `[a, b]` and see the plot update in real-time as they move the slider.
+   - You can add sliders for adjusting parameters like the derivative step size (`h`) or the number of points used for integration.
+
+6. **Save the Plot**:
+   - Add a button or function that allows users to save the current plot as a PNG file. The filename could be customizable, for example, "function_derivative_integral.png".
+
+---
+
+### **Sample Output**:
+
+The final output should include:
+1. A **visual plot** with:
+   - The function `f(x)` in blue.
+   - The derivative `f'(x)` in red.
+   - The integral `∫f(x) dx` in green.
+   - Roots marked with black dots.
+   - Maxima/minima annotated.
+   - Critical points marked with special symbols.
+2. **Subplots**:
+   - One subplot showing the **absolute error** for the derivative.
+   - Another subplot showing the **absolute error** for the integral.
+3. **Interactive Plot (Optional)**:
+   - Sliders to dynamically adjust the interval `[a, b]`.
+
+---
+
+### Example Challenge Workflow:
+
+1. **Define the Function**:
+   - User inputs `f(x) = sin(x)`.
+   - Range `[0, 2π]`.
+
+2. **Numerical Derivative and Integral**:
+   - Compute and plot the function, its derivative, and its integral.
+   
+3. **Root Finding**:
+   - Find roots of `sin(x)` within `[0, 2π]` (should find roots at `0`, `π`, and `2π`).
+   - Mark these roots on the plot.
+   
+4. **Error Analysis**:
+   - Compare the numerical derivative (`cos(x)`) with the exact derivative.
+   - Compare the numerical integral (`-cos(x)`) with the exact integral.
+   - Plot the absolute error for both on subplots.
+
+5. **Display Results**:
+   - Generate the complete plot with annotations, critical points, and roots marked.
+   
+6. **Save the Plot**:
+   - Save the plot as "sin_function_analysis.png".
+
+---
+
+This extended version not only tests your ability to perform mathematical operations and visualizations but also adds complexity with root-finding, error analysis, user interaction, and more sophisticated plotting techniques. It offers a comprehensive challenge that integrates several advanced programming and mathematical concepts.
