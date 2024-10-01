@@ -1,0 +1,32 @@
+Done - Get a way to input a function
+Done - Get the point and range
+Do later - Get the color of plotted things
+Test this - Get a way to raise error if not a vaid function
+
+Next thing - Find roots using neutons method
+
+Do numerical differentiation for the funtion
+
+Do numerical integration using trapezoidal / adaptive rules rule
+
+Get error of integral
+Get error of derivative
+
+Get the taylor/fourier approximation
+
+Plot function
+Plot tangent line
+Plot deriv
+Plot second deriv
+Plot indef integral if it exists
+Plot critical points
+Plot max and min points
+Plot integral space thingy
+Plot t/f approximation
+
+Put the text for numer. int and deriv as well as analyitical int and derivative
+Also plot error, all roots, critical points, etc. in sep. graph
+
+Make interactive controls
+
+Make a way to save the plot
